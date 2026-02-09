@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
 
-## Getting Started
+# 🖥️ My Terminal Blog
 
-First, run the development server:
+A personal blog and portfolio built with **Next.js** and **Tailwind CSS**, designed to mimic the look and feel of my terminal environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project blends minimal design with developer-centric interaction patterns, and will gradually evolve into a fully keyboard-driven experience inspired by Vim and tmux.
+
+It's design is currently a WIP as blending a terminal environment with proper UX methodologies proves to be quite a challenge!
+
+---
+
+## ✨ Overview
+
+This site serves as:
+
+* 📚 A daily study log
+* ✍️ A space for long-form technical articles (made by me!)
+* 🛠️ Contains my portfolio
+* 🖥️ A terminal-inspired interactive experience
+
+The UI is intentionally minimal and terminal-themed, reflecting the tools and workflows I use daily. Additionally the project was built with VIM with no plugins which might explain some weird formatting in certain areas :D.
+
+---
+
+## 🚀 Tech Stack
+
+* **Framework:** Next.js
+* **Styling:** Tailwind CSS
+* **Deployment:** (Probably Netlify)
+
+---
+
+## 🎯 Planned features include
+
+* Vim-style keyboard navigation
+* Basic tmux-inspired keybindings
+* Fully keyboard-driven UI interaction
+* Interactive terminal-like commands
+* Dynamic content rendering
+* Expanded article system
+
+The long-term goal is to make the site feel like a living development environment rather than a traditional webpage.
+
+---
+
+## 📖 Content Plan
+
+I plan to:
+
+* Document what I learn in structured logs daily. (I was doing this as a challenge on X already)
+* Publish deep-dive technical articles
+* Track progress publicl
+---
+
+## 🛠️ Local Development
+
+Clone the repository:
+
+```
+git clone https://github.com/coronado03/my-blog-frontend.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Run development server:
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔮 Future Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* [ ] Vim motion navigation
+* [ ] tmux-style window controls
+* [ ] Interactive command mode
+* [ ] Search functionality
+* [ ] Markdown/MDX article system
+* [ ] Dark/light terminal themes
+* [ ] Performance optimizations
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
