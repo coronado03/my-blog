@@ -9,7 +9,6 @@ type TextInputProps = {
 
 const TextInput = ({ handleSubmit }: TextInputProps) => {
   const [inputValue, setInputValue] = useState("");
-
   return (
     <form
       onSubmit={(e: FormEvent<HTMLFormElement>) => {
@@ -18,7 +17,7 @@ const TextInput = ({ handleSubmit }: TextInputProps) => {
       }}
       className="flex gap-2 items-center mt-6"
     >
-      <span className="text-[#a6e3a1]">coronado@blog:~$</span>
+      <span className="text-catppuccin-green">coronado@blog:~$</span>
       <input
         value={inputValue}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -26,7 +25,7 @@ const TextInput = ({ handleSubmit }: TextInputProps) => {
         }
         type="text"
         placeholder="type 'cd blog' to check my blog || type 'cd daily' to check my daily progress"
-        className="text-terminal-white border-none outline-none flex-1 caret-[#a6e3a1] bg-transparent"
+        className="text-terminal-white border-none outline-none flex-1 caret-catppuccin-green bg-transparent"
       />
     </form>
   );
@@ -46,11 +45,9 @@ const TerminalInput = () => {
 
   const createCommand = (command: CommandType): CommandHistoryType => {
     const commandId = commandHistory.length || 0;
-
     if (command === "logs") return { id: commandId, command: "logs" };
     if (command === "articles") return { id: commandId, command: "articles" };
     if (command === "help") return { id: commandId, command: "help" };
-
     return { id: commandId, command: "help" };
   };
 
@@ -62,21 +59,18 @@ const TerminalInput = () => {
           createCommand("logs"),
         ]);
         break;
-
       case "cd articles":
         setCommandHistory((oldCommandHistory) => [
           ...oldCommandHistory,
           createCommand("articles"),
         ]);
         break;
-
       case "help":
         setCommandHistory((oldCommandHistory) => [
           ...oldCommandHistory,
           createCommand("help"),
         ]);
         break;
-
       case "clear":
         setCommandHistory([]);
         break;
@@ -92,18 +86,17 @@ const TerminalInput = () => {
               return (
                 <div key={command.id}>
                   <h2 className="flex flex-row gap-x-2 text-terminal-white mb-4">
-                    <span className="text-[#a6e3a1]">coronado@blog:~$</span> ls
+                    <span className="text-catppuccin-green">coronado@blog:~$</span> ls
                     ~/Logs
                   </h2>
                   <Logs />
                 </div>
               );
-
             case "articles":
               return (
                 <div key={command.id}>
                   <h2 className="flex flex-row gap-x-2 text-terminal-white mb-4">
-                    <span className="text-[#a6e3a1]">coronado@blog:~$</span> ls
+                    <span className="text-catppuccin-green">coronado@blog:~$</span> ls
                     ~/Articles
                   </h2>
                   <Logs />
@@ -113,7 +106,7 @@ const TerminalInput = () => {
               return (
                 <div key={command.id}>
                   <h2 className="flex flex-row gap-x-2 text-terminal-white mb-4">
-                    <span className="text-[#a6e3a1]">coronado@blog:~$</span>{" "}
+                    <span className="text-catppuccin-green">coronado@blog:~$</span>{" "}
                     help
                   </h2>
                   <div
@@ -124,14 +117,13 @@ const TerminalInput = () => {
                   </div>
                 </div>
               );
-
             default:
               return null;
           }
         })}
-
       <TextInput handleSubmit={handleSubmit} />
     </div>
   );
 };
+
 export default TerminalInput;

@@ -2,7 +2,7 @@ import TerminalInput from "./terminal-input/terminal-input";
 
 const Landing = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[calc(100vh-64px)]">
       <div className="flex flex-row">
         <pre className="whitespace-pre font-mono text-catppuccin-lavender overflow-x-auto p-6">
           {`⠀⠀⡰⣽⡁⣾⡿⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⢀⢤⠀⠀⠀

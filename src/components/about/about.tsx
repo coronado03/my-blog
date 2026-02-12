@@ -3,7 +3,7 @@ import ExperienceSection from './experience';
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-7.5 p-6">
+    <div className="flex flex-col gap-7.5 p-6 min-h-[calc(100vh-64px)]">
       <div className="flex items-start gap-4">
       <div className="flex flex-row">
 

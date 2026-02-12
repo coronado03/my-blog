@@ -27,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased m-4 border `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
+      <div className="p-4">
         {children}
+      </div>
         <TmuxStatusBar />
       </body>
     </html>
