@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Article } from '../types/article';
+import { Article } from '../../types/article';
 import ArticlePreview from './preview';
 
 const ArticleTable = ({ files }: { files: Article[] }) => {
@@ -37,23 +37,19 @@ const ArticleTable = ({ files }: { files: Article[] }) => {
                 <td className="py-2 pr-4">
                   <div className="flex flex-col leading-tight">
                     <span className="text-catppuccin-blue">coronado@blog</span>
-                    <span className="text-catppuccin-sapphire text-xs">{file.group}</span>
                   </div>
                 </td>
                 <td className="py-2 pr-4 text-catppuccin-peach">{file.size}</td>
                 <td className="py-2 pr-4">
                   <div className="flex flex-col leading-tight">
                     <span className="text-catppuccin-green">{file.date}</span>
-                    <span className="text-catppuccin-teal text-xs">{file.time}</span>
                   </div>
                 </td>
-                <td className={`py-2 ${file.type === 'dir' ? 'text-catppuccin-blue font-bold' : 'text-foreground'}`}>
+                <td className={"py-2"}>
                   {file.slug}.md
-                  {file.active && (
-                    <span className="ml-2 text-xs text-catppuccin-red border border-catppuccin-red px-1.5 py-0.5 rounded">
-                      ACTIVE
-                    </span>
-                  )}
+                  <span className={`ml-2 text-xs text-catppuccin-red border border-catppuccin-red px-1.5 py-0.5 rounded ${file.slug === previewed.slug ? 'visible' : 'invisible'}`}>
+                    ACTIVE
+                  </span>
                 </td>
               </tr>
             ))}

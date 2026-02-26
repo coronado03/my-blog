@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/layout/navbar/navbar";
 import TmuxStatusBar from "@/components/layout/tmux-status-bar/tmux-bar";
 
 const geistSans = Geist({
