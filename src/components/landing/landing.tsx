@@ -1,38 +1,24 @@
-import TerminalInput from "./terminal-input/terminal-input";
+import { getAllArticles } from '../utils/get-articles';
+import ArticleTable from './article-table';
 
 const Landing = () => {
+  const files = getAllArticles();
+
   return (
-    <div className="min-h-[calc(100vh-64px)]">
-      <div className="flex flex-row">
-        <pre className="whitespace-pre font-mono text-catppuccin-lavender overflow-x-auto p-6">
-          {`⠀⠀⡰⣽⡁⣾⡿⣡⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⠀⢀⢤⠀⠀⠀
-⠀⠀⠈⣿⣿⢑⣽⣮⣾⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⣊⣃⠀⠀⠀
-⠀⠀⠀⠘⢿⣾⣿⡿⣫⢞⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀
-⠀⣴⠶⣂⠴⣷⣟⣷⢽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣷⣤⡤⠤
-⠸⣷⣷⣴⣶⣮⢿⢣⣾⣿⣿⣿⣿⣿⠿⢿⣿⣿⣿⣿⣿⣟⠝⢿⣿⣿⣿⣟⢧
-⠀⣿⣿⣵⣶⡷⡤⠟⢛⢫⠈⢢⠀⠈⠆⠹⢝⡿⣿⣿⣿⣟⡽⢿⣿⣿⣤⣉⢩
-⠀⢸⣿⡉⠀⠙⠀⠀⠀⠀⢃⢀⠡⡀⢈⡤⠮⡦⢸⠿⣿⡟⢫⣿⣿⣿⣿⣯⣿
-⠀⠀⣿⣇⡀⠀⠀⠀⠀⠀⠹⢀⣠⠞⢉⡴⡶⠃⣻⠀⣿⡯⣼⣿⣿⣿⣿⣿⣿
-⠀⢀⣽⣿⣝⣦⣄⡀⠀⠠⡴⠟⡻⢯⡭⠋⠀⢀⡉⠔⡽⡻⢻⣿⣿⣿⣿⣿⣿
-⢀⣎⣿⢿⣿⡝⠶⠙⢹⡄⠈⠉⠙⠀⠀⠀⠀⢈⡡⠔⠇⣧⣿⣿⣿⣿⣿⣿⣿
-⢘⢽⠃⣾⡟⣿⣦⡀⠺⣃⠀⠀⠀⠀⠀⠀⠠⠉⠄⣀⣴⣽⡋⣾⡇⣿⣿⣿⣿
-⡀⠸⠄⣿⡓⣿⣿⣿⣤⡸⣀⠀⡠⠄⠀⣀⠀⠑⢀⡾⢹⣿⣇⣿⣵⣿⣿⣿⣿
-⠀⠀⠀⢹⣷⡟⣿⡿⣿⣿⣾⣿⠟⠛⠛⡈⢻⣦⡾⠁⠈⠛⢿⣿⣿⣿⣿⣻⣿
-⠀⠀⠀⡰⡟⣇⡿⣿⣿⣿⣿⣿⣕⢲⢫⣤⢾⡿⠁⠀⠀⠀⡜⣽⣿⡟⣿⣿⠿
-⠀⠀⢀⡇⠁⣾⣾⣿⣿⣿⣿⣿⢻⣷⣾⡿⣏⠀⢠⡉⠀⡜⣠⣿⣿⢡⣿⣿⠀
-⠀⠀⠘⣷⣼⠟⢫⣿⢫⣿⣿⢹⣾⣿⣿⡞⠝⡏⠋⠻⣯⣮⣿⣿⣿⠟⠁⠫⣧
-⠀⠀⠀⣸⣿⢀⠞⡏⣾⣿⣿⣼⣿⣿⣿⠇⠈⠑⠀⡀⠀⣸⣿⣿⡏⠀⠀⠀⠀
-⢀⠀⠈⠘⠿⢯⡼⢽⣿⡟⠙⢿⣿⣿⡿⠀⠀⠀⠀⡻⢠⣿⣿⡟⡃⠀⠀⠀⠀`}
-        </pre>
-        <div className="whitespace-pre font-mono text-catppuccin-lavender overflow-x-auto p-6">
-          <p>user@terminal:~$ cat welcome.txt</p>
-          <h1 className="mb-5">Coronado Blog</h1>
-          <p>Articles about SWE, Linux, terminal tools, and developer productivity</p>
-          <p>Also publish my daily learnings!</p>
+    <div className="min-h-[calc(100vh-64px)] bg-background text-foreground font-mono p-6">
+      <div className="mb-4">
+        <div className="flex items-center gap-2">
+          <span className="text-catppuccin-blue">coronado@blog</span>
+          <span className="text-catppuccin-red">:</span>
+          <span className="text-catppuccin-teal">~/articles</span>
+          <span className="text-foreground">$</span>
+          <span className="text-catppuccin-yellow">ls -lh</span>
         </div>
+        <p className="text-muted-foreground mt-2">total 328K</p>
       </div>
-      <TerminalInput />
+      <ArticleTable files={files} />
     </div>
   );
-}
+};
+
 export default Landing;
