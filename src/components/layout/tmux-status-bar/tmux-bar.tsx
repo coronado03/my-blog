@@ -7,8 +7,8 @@ import Link from "next/link";
 const windows = [
   { id: 0, name: "articles", link: "/" },
  // { id: 1, name: "logs", link: "/logs" },
- // { id: 2, name: "about", link: "/about-me" },
- // { id: 3, name: "books", link: "/book" },
+  { id: 1, name: "about", link: "/about-me" },
+  { id: 2, name: "books", link: "/book" },
  // { id: 4, name: "contact", link: "/contact" },
 ];
 

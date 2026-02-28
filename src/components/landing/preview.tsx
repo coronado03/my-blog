@@ -30,7 +30,7 @@ export default function ArticlePreview({ date, content, tags, title }: ArticlePr
             </span>
             <span className="flex items-center gap-1">
               <span className="text-catppuccin-red"><IoPerson /></span>
-              guest
+              coronado
             </span>
             <span className="flex items-center gap-1">
               <span className="text-catppuccin-green"><BsFillTagsFill /></span>
