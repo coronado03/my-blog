@@ -164,3 +164,20 @@ body {
   height: 2px;
   background: var(--color-terminal-white);
 }
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+* {
+    scrollbar-width: normal;
+    scrollbar-color: var(--dark-blue) var(--custom-white);
+}
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: var(--dark-blue) ;
+    border-radius: 20px;
+    border: 3px solid var(--custom-white);
+}
