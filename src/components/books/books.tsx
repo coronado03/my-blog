@@ -9,40 +9,40 @@ type Book = {
 export default function Books() {
   const books: Book[] = [
     {
-      title: "Designing Data-Intensive Applications",
-      author: "Martin Kleppmann",
-      progress: 55,
+      title: "C: A Modern Approach",
+      author: "K.N. King",
+      progress: 72, // ~page 300 of ~416 pages
       status: "Reading",
-      year: 2017
+      year: 2008
     },
     {
-      title: "The Pragmatic Programmer",
-      author: "Andrew Hunt & David Thomas",
-      progress: 100,
-      status: "Done",
+      title: "Computer Networking: A Top-Down Approach",
+      author: "James F. Kurose & Keith W. Ross",
+      progress: 19, // ~page 115 of ~800 pages
+      status: "Reading",
+      year: 2021
+    },
+    {
+      title: "Effective TypeScript",
+      author: "Dan Vanderkam",
+      progress: 2, // ~page 10
+      status: "Reading",
       year: 2019
     },
     {
-      title: "Site Reliability Engineering",
-      author: "Niall Richard Murphy",
-      progress: 15,
-      status: "Reading",
-      year: 2016
-    },
-    {
-      title: "Rust in Action",
-      author: "Tim McNamara",
-      progress: 80,
-      status: "Reading",
-      year: 2021
-    },
-    {
-      title: "Distributed Systems with Go",
-      author: "Travis Jeffery",
+      title: "CS:APP - Computer Systems",
+      author: "Bryant & O'Hallaron",
       progress: 0,
       status: "Queue",
-      year: 2021
-    }
+      year: 2015
+    },
+    {
+      title: "SICP",
+      author: "Abelson & Sussman",
+      progress: 0,
+      status: "Queue",
+      year: 1996
+    },
   ];
 
   const getProgressBar = (progress: number) => {
@@ -72,16 +72,16 @@ export default function Books() {
       <main className="flex-grow p-4 md:p-8 max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 border border-[var(--color-border)] p-4 bg-black/10">
           <div className="space-y-1">
-            <div className="text-xs uppercase opacity-50 font-bold">TOTAL_READING</div>
-            <div className="text-2xl text-[var(--color-catppuccin-mauve)]">08 <span className="text-sm opacity-50">Books</span></div>
+            <div className="text-xs uppercase opacity-50 font-bold">ACTIVE_READS</div>
+            <div className="text-2xl text-[var(--color-catppuccin-mauve)]">03 <span className="text-sm opacity-50">Books</span></div>
           </div>
           <div className="space-y-1">
-            <div className="text-xs uppercase opacity-50 font-bold">COMPLETED_YTD</div>
-            <div className="text-2xl text-[var(--color-catppuccin-green)]">14 <span className="text-sm opacity-50">Books</span></div>
+            <div className="text-xs uppercase opacity-50 font-bold">IN_QUEUE</div>
+            <div className="text-2xl text-[var(--color-catppuccin-yellow)]">02 <span className="text-sm opacity-50">Books</span></div>
           </div>
           <div className="space-y-1">
-            <div className="text-xs uppercase opacity-50 font-bold">TARGET_2026</div>
-            <div className="text-2xl text-[var(--color-catppuccin-yellow)]">24 <span className="text-sm opacity-50">/ 50 (48%)</span></div>
+            <div className="text-xs uppercase opacity-50 font-bold">FOCUS_AREA</div>
+            <div className="text-2xl text-[var(--color-catppuccin-green)]">CS <span className="text-sm opacity-50">Fundamentals</span></div>
           </div>
         </div>
 
@@ -142,13 +142,16 @@ export default function Books() {
           </div>
           <div className="bg-black/20 p-4 border-l-2 border-[var(--color-catppuccin-sky)] text-sm space-y-2 opacity-80">
             <p>
-              <span className="text-[var(--color-catppuccin-mauve)]">[INFO]</span> Successfully implemented Raft consensus algorithm from DDIA Chapter 7.
+              <span className="text-[var(--color-catppuccin-mauve)]">[INFO]</span> C: A Modern Approach p.300 — working through pointers and dynamic memory allocation. Starting to click.
             </p>
             <p>
-              <span className="text-[var(--color-catppuccin-mauve)]">[INFO]</span> Learned about memory safety vs ownership patterns in Rust.
+              <span className="text-[var(--color-catppuccin-mauve)]">[INFO]</span> Networking p.115 — finished application layer, entering transport layer. TCP/UDP internals incoming.
             </p>
             <p>
-              <span className="text-[var(--color-catppuccin-red)]">[WARN]</span> Backlog growing: 12 books pending prioritization.
+              <span className="text-[var(--color-catppuccin-yellow)]">[DEBUG]</span> Effective TypeScript p.10 — just getting started. Item 1 already made me rethink how I use types.
+            </p>
+            <p>
+              <span className="text-[var(--color-catppuccin-red)]">[WARN]</span> CS:APP and SICP queued but unstarted. Queue depth critical — prioritization required.
             </p>
           </div>
         </div>
