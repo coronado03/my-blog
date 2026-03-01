@@ -20,7 +20,7 @@ export default function About() {
             <span className="text-catppuccin-green">coronado@blog:~$</span> cat welcome.txt
           </p>
           <h1 className="text-catppuccin-mauve text-xl font-bold tracking-wide">
-            Coronado's Terminal Workspace
+            {`Coronado's`} Terminal Workspace
           </h1>
           <p className="text-terminal-light text-sm leading-relaxed">
             Fullstack dev obsessed with tooling, productivity and CS. I build things with TypeScript, C and more —
