@@ -24,7 +24,7 @@ export default function ExperienceSection() {
             <div className="grid grid-cols-4 gap-x-3 gap-y-3">
 
               <div className="flex flex-col gap-1">
-                <span className="text-terminal-gray text-xs italic mb-1">// languages</span>
+                <span className="text-terminal-gray text-xs italic mb-1">{`//`} languages</span>
                 <SkillEntry label="TypeScript" href="https://www.typescriptlang.org" color="text-catppuccin-blue" />
                 <SkillEntry label="Python"     href="https://www.python.org"         color="text-catppuccin-yellow" />
                 <SkillEntry label="C#"         href="https://dotnet.microsoft.com"   color="text-catppuccin-mauve" />
@@ -33,7 +33,7 @@ export default function ExperienceSection() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="text-terminal-gray text-xs italic mb-1">// frameworks</span>
+                <span className="text-terminal-gray text-xs italic mb-1">{`//`} frameworks</span>
                 <SkillEntry label="Next.js" href="https://nextjs.org"     color="text-catppuccin-sky" />
                 <SkillEntry label="Nest.js" href="https://nestjs.com"     color="text-catppuccin-red" />
                 <SkillEntry label="Docker"  href="https://www.docker.com" color="text-catppuccin-sky" />
@@ -41,14 +41,14 @@ export default function ExperienceSection() {
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="text-terminal-gray text-xs italic mb-1">// data</span>
+                <span className="text-terminal-gray text-xs italic mb-1">{`//`} data</span>
                 <SkillEntry label="PostgreSQL" href="https://www.postgresql.org" color="text-catppuccin-sapphire" />
                 <SkillEntry label="Git"        href="https://git-scm.com"        color="text-catppuccin-peach" />
                 <SkillEntry label="AWS"        href="https://aws.amazon.com"     color="text-catppuccin-peach" />
               </div>
 
               <div className="flex flex-col gap-1">
-                <span className="text-terminal-gray text-xs italic mb-1">// setup</span>
+                <span className="text-terminal-gray text-xs italic mb-1">{`//`} setup</span>
                 <SkillEntry label="Arch Linux"  href="https://archlinux.org"                        color="text-catppuccin-mauve" />
                 <SkillEntry label="i3"          href="https://i3wm.org"                             color="text-catppuccin-mauve" />
                 <SkillEntry label="Neovim"      href="https://neovim.io"                            color="text-catppuccin-green" />
