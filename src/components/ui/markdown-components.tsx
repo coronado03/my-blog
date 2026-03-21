@@ -1,3 +1,4 @@
+import React from "react";
 import type { Components } from "react-markdown";
 
 export const markdownComponents: Components = {
@@ -18,9 +19,19 @@ export const markdownComponents: Components = {
       {children}
     </h3>
   ),
-  p: ({ children }) => (
-    <p className="text-sm leading-relaxed text-terminal-light mb-6">{children}</p>
-  ),
+  p: ({ children }) => {
+    const childArray = React.Children.toArray(children);
+    const isImageOnly =
+      childArray.length === 1 &&
+      React.isValidElement(childArray[0]) &&
+      (childArray[0] as any).props?.src !== undefined;
+
+    if (isImageOnly) return <>{children}</>;
+
+    return (
+      <p className="text-sm leading-relaxed text-terminal-light mb-6">{children}</p>
+    );
+  },
   a: ({ href, children }) => (
     <a
       href={href}
@@ -72,14 +83,14 @@ export const markdownComponents: Components = {
     <em className="text-catppuccin-flamingo italic">{children}</em>
   ),
   img: ({ src, alt }) => (
-    <div className="border border-muted mb-6 bg-terminal-dark overflow-hidden">
+    <span className="border border-muted mb-6 bg-terminal-dark overflow-hidden block">
       <img src={src} alt={alt} className="w-full object-cover max-h-72" />
       {alt && (
-        <div className="text-center text-[11px] text-terminal-gray py-2 px-4 border-t border-muted tracking-wide">
+        <span className="text-center text-[11px] text-terminal-gray py-2 px-4 border-t border-muted tracking-wide block">
           {alt}
-        </div>
+        </span>
       )}
-    </div>
+    </span>
   ),
   table: ({ children }) => (
     <div className="overflow-x-auto mb-6">
