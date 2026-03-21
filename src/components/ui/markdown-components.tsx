@@ -23,8 +23,8 @@ export const markdownComponents: Components = {
     const childArray = React.Children.toArray(children);
     const isImageOnly =
       childArray.length === 1 &&
-      React.isValidElement(childArray[0]) &&
-      (childArray[0] as any).props?.src !== undefined;
+      React.isValidElement<{ src?: string }>(childArray[0]) &&
+      childArray[0].props.src !== undefined;
 
     if (isImageOnly) return <>{children}</>;
 
